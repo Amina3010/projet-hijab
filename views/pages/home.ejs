@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <!-- Start Slider -->
+    <section class="w3s-slider-section">
+        <div class="w3s-slider-item" 
+        style="background-image: url(assets/img/banner1.jpg)">
+          <div class="carousel-caption text-start">
+            <h2 class="font-20 dark-text font-poppins fw-light mb-0">50% off in all products</h2>
+            <h1 class="font-60 dark-text font-roboto my-2 fw-bold">
+              WELCOME TO OUR ONLINE FASHION STORE
+            </h1>
+            <a href="#" class="w3s-primary-btn d-inline-block mt-1">shop now</a>
+          </div>
+        </div>
+  </section>
+  <!-- End Slider -->
+
+  <!-- Shop Banner Section -->
+  <section id="w3s_shop_banner_section" class="mt-5 pt-md-5 w3s-shop-banner-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="w3s-shop-banner-inner py-3 position-relative overflow-hidden">
+                <img src="assets/img/shop_banner_img1.jpg" class="img-fluid float-end w-100" alt="Banner" />
+                <div class="clearfix"></div>
+                <div class="w3s-banner-info position-absolute">
+                  <h3 class="font-20 font-roboto text-dark">Super Sale</h3>
+                  <h2 class="font-roboto font-32 my-2 fw-bold text-dark">New Collection</h2>
+                  <a href="#" class="link-hover text-decoration-none text-dark">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="w3s-shop-banner-inner py-3 position-relative overflow-hidden">
+                <img src="assets/img/shop_banner_img2.jpg" class="img-fluid float-start w-100" alt="Banner" />
+                <div class="clearfix"></div>
+                <div class="w3s-banner-info position-absolute">
+                  <h2 class="font-roboto font-32 fw-bold text-dark">Nos Hijab</h2>
+                  <h3 class="font-24 font-roboto my-2 text-dark">Sale 40% Off</h3>
+                  <a href="#" class="link-hover text-decoration-none text-dark">Shop Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Banner Section -->
+
+  <!-- Start Exclusive Products -->
+  <section class="my-5 pb-5 w3s-exclusive-product-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="font-32 mb-5 dark-text text-center font-roboto fw-bold">HIJABS ET TURBANS</h2>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Products -->
+        <% articles.forEach(article => { %>
+          <div class="col-lg-3 col-sm-4 p-3 w3s-product-item">
+            <div class="w3s-product-card card">
+              <div class="w3s-product-img overflow-hidden cursor-pointer position-relative bg-dark">
+                <img src="<%= article.image %>" class="img-fluid" alt="product" />
+                <div class="w3s-product-action-btn position-absolute top-50 start-50 translate-middle">
+                  <a href="#" class="px-3 py-2 bg-white dark-text font-18 d-inline-block hover-btn"><i class="bx bx-cart"></i></a>
+                </div>
+              </div>
+              <div class="w3s-product-info bg-white p-3">
+                <h6 class="font-16 link-hover font-roboto cursor-pointer text-capitalize"><%= article.name %></h6>
+                <div class="w3s-product-price">
+                    <span class="primary-text font-16 fw-bold"><%= article.prix %></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% }); %> 
+        <!-- !Products -->
+      </div>
+    </div>
+    <!-- !Products carousel -->
+  </section>
+  <!-- End Exclusive Products -->
+
+  <!-- Start Tranding offer banner -->
+  <!-- <section class="w3s-tranding-banner-section bg-light-blue">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="w3s-tranding-banner-info text-center pb-3 my-5">
+            <h4 class="font-16 primary-text font-poppins fw-normal">New season trends!</h4>
+            <h2 class="font-32 font-roboto py-2 fw-bold dark-text text-capitalize">
+              ENFIN DISPONIBLE !
+              TOUTE NOUVELLE COLLECTION
+              “CLASSY 2”
+            </h2>
+            <h4 class="font-20 font-roboto dark-text">Sale Get up to 50% Off</h4>
+            <a href="#" class="w3s-primary-btn mt-3 d-inline-block">Shop now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <section class="w3s-slider-section">
+    <div class="w3s-slider-item" 
+    style="background-image: url(assets/img/box.jpg)">
+
+    <h2 class="font-32 font-roboto py-2 fw-bold blue-text text-capitalize text-center mt-6" >
+      BOX HIJABS <br>
+LE PLAISIR D'OFFRIR 
+
+    </h2>
+  </div>
+
+  
+
+  </section>
+
+
+  <!-- End Tranding offer banner -->
+  
+  <!-- Start Testimonial -->
+  <section class="w3s-testimonial-section bg-redon py-5">
+    <div class="container">
+      <div class="row  mb-4">
+        <div class="col-12">
+          <h1 class="font-32 dark-text pt-5 pb-4 font-roboto text-center">Derniers avis</h1>
+        </div>
+      </div>
+      <!-- testimonial slider -->
+      <div class="row">
+          <div class="col-lg-6 col-sm-4 text-center">
+            <p class="font-poppins font-16 secondary-text w-75 mx-auto">
+              Très beau manteau kimono bonne matière, facile à porter
+              et surtout de bonne qualité
+              Chic et classe
+              À très vite pour de nouvelles commandes ????
+            </p>
+            <div class="d-flex justify-content-center my-4">
+              <div class="w3s-author-img">
+                <img src="assets/img/user_img1.jpg" class="img-fluid" alt="testimonial author image">
+              </div>
+              <div class="w3s-author-info text-start ms-2">
+                <h4 class="font-20 dark-text font-roboto">Amina</h4>
+                <span class="font-poppins font-14 primary-text">Customer</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-4 text-center">
+            <p class="font-poppins font-16 secondary-text w-75 mx-auto">Cela fait plusieurs fois que je commande sur le site et j'ai toujours été très satisfaite livraison ultra rapide 
+              emballage soigné et bonne qualité.
+              
+            </p>
+            <div class="d-flex justify-content-center my-4">
+              <div class="w3s-author-img">
+                <img src="assets/img/user_img2.jpg" class="img-fluid" alt="testimonial author image">
+              </div>
+              <div class="w3s-author-info text-start ms-2">
+                <h4 class="font-20 dark-text font-roboto">Fatima</h4>
+                <span class="font-poppins font-14 primary-text">Customer</span>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- !testimonial slider -->
+    </div>
+  </section>
+  <!-- End Testimonial -->
+
+  <!-- Start Services -->
+  <div class="w3s-services-section py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 border-end">
+          <div class="w3s-service-info text-center">
+            <span class="font-40 secondary-text"><i class="bi bi-truck"></i></span>
+            <h3 class="font-20 font-roboto dark-text text-capitalize mt-2">Livraison Gratuite</h3>
+            <p class="font-16 font-poppins secondary-text w-75 mx-auto mt-2">C'est une forte motivation pour vous d'avoir plus de confiance en nos produits</p>
+          </div>
+        </div>
+        <div class="col-md-4 border-end">
+          <div class="w3s-service-info text-center">
+            <span class="font-40 secondary-text"><i class="bi bi-box-arrow-down-left"></i></span>
+            <h3 class="font-20 font-roboto dark-text text-capitalize mt-2">30 Jours de Retour</h3>
+            <p class="font-16 font-poppins secondary-text w-75 mx-auto mt-2">C'est une forte motivation pour vous d'avoir plus de confiance en nos produits</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="w3s-service-info text-center">
+            <span class="font-40 secondary-text"><i class="bi bi-headset"></i></span>
+            <h3 class="font-20 font-roboto dark-text text-capitalize mt-2">27/4 Soutien</h3>
+            <p class="font-16 font-poppins secondary-text w-75 mx-auto mt-2">C'est une forte motivation pour vous d'avoir plus de confiance en nos produits</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Services -->
+
+    <%- include('../partials/footer') %>
+
+    <%- include('../partials/scripts') %>
+</body>
+
+</html>
